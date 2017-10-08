@@ -10,5 +10,5 @@ package br.rj.macae.femass.prova.modelo;
  * @author YMoraes
  */
 public class NewClass {
-    
+    private int i;
 }
