@@ -79,7 +79,7 @@ public class Avaliacao {
         this.sexo = sexo;
     }
     
-    public String classificaIMC(){
+    public String classificaIMC(String sexo, Double imc){
         if(this.sexo=="Masculino"){
             if(this.imc>43){
                 return "Obesidade mórbida";
@@ -119,7 +119,7 @@ public class Avaliacao {
 
     @Override
     public String toString() {
-        return this.nome+" | IMC: "+String.format("%.2f", imc)+" | Status: "+classificaIMC();
+        return this.nome+" | IMC: "+String.format("%.2f", imc)+classificaIMC(this.getSexo(),this.getImc());
     }
 
     @Override

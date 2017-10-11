@@ -182,7 +182,7 @@ public class AvaliacaoGUI extends javax.swing.JFrame {
                                     .addComponent(txtEstatura, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,9 +268,12 @@ public class AvaliacaoGUI extends javax.swing.JFrame {
         AvaliacaoControle controle = new AvaliacaoControle();
         try {
             controle.atualizarListaAvaliacao(lstAvaliacao);
+            
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage());
-        }        // TODO add your handling code here:
+        }  
+        
+// TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
     private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
@@ -310,6 +313,10 @@ public class AvaliacaoGUI extends javax.swing.JFrame {
         txtEstatura.setText(String.valueOf(r.getEstatura()));
         txtIdade.setText(String.valueOf(r.getIdade()));
         txtSexo.setText(r.getSexo());
+           
+        
+        
+        
                 // TODO add your handling code here:
     }//GEN-LAST:event_lstAvaliacaoValueChanged
 
