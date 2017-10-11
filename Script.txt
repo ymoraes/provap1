@@ -1,0 +1,22 @@
+-- Table: public.avaliacao
+
+-- DROP TABLE public.avaliacao;
+
+CREATE TABLE public.avaliacao
+(
+    id integer NOT NULL DEFAULT nextval('avaliacao_id_seq'::regclass),
+    nome character varying(50) COLLATE pg_catalog."default",
+    massa double precision,
+    estatura double precision,
+    idade integer,
+    sexo character varying(15) COLLATE pg_catalog."default",
+    imc double precision,
+    CONSTRAINT avaliacao_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.avaliacao
+    OWNER to postgres;
